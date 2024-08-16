@@ -4,7 +4,7 @@ version = 3
 
 [[package]]
 name = "all-is-cubes"
-version = "0.8.0"
+version = "0.0.0"
 dependencies = [
  "all-is-cubes-base",
  "itertools",
@@ -12,7 +12,7 @@ dependencies = [
 
 [[package]]
 name = "all-is-cubes-base"
-version = "0.8.0"
+version = "0.0.0"
 
 [[package]]
 name = "either"

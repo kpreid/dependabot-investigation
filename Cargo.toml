@@ -50,8 +50,8 @@ authors = ["Kevin Reid <kpreid@switchb.org>"]
 repository = "https://github.com/kpreid/all-is-cubes"
 
 [workspace.dependencies]
-all-is-cubes = { path = "all-is-cubes", version = "0.8.0", default-features = false }
-all-is-cubes-base = { path = "all-is-cubes-base", version = "0.8.0", default-features = false }
+all-is-cubes = { path = "all-is-cubes", default-features = false }
+all-is-cubes-base = { path = "all-is-cubes-base", default-features = false }
 allocation-counter = "0.8.1"
 anyhow = "1.0.70"
 # Each use should be { optional = true }.
