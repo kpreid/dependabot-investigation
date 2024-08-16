@@ -1,5 +1,7 @@
 [workspace]
-members = ["problem"]
+
+[package]
+name = "problem"
 
 [workspace.lints]
 rust.rust_2018_idioms = { level = "deny", priority = -1 }
