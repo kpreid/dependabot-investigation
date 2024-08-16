@@ -1,38 +1,6 @@
 [workspace]
 members = [
-  "all-is-cubes-base",
-  #"all-is-cubes-base",
-  #"all-is-cubes-content",
-  #"all-is-cubes-desktop",
-  #"all-is-cubes-gpu",
-  #"all-is-cubes-mesh",
-  #"all-is-cubes-port",
-  #"all-is-cubes-render",
-  #"all-is-cubes-server",
-  #"all-is-cubes-ui",
-  #"test-renderers",
-  #"tools/xtask",
-
-  # Workspaces generally expect to be able to compile everything for the same target,
-  # but all-is-cubes-wasm only compiles on wasm and all-is-cubes-desktop doesn't.
-  # Specific advantages:
-  # * The wasm workspace has Cargo config telling it to be built for wasm32-unknown-unknown,
-  #   which rust-analyzer picks up, so all IDE assistance works.
-  # 
-  # Disadvantages, or advantages of the alternative of merely `cfg`-disabling all the wasm-only
-  # code:
-  # * `cargo fmt`, `cargo tree`, etc. don't work on this code (but `xtask` provides
-  #   all-workspaces commands).
-  #
-  # "all-is-cubes-wasm",
-  
-  # Including this makes the fuzz targets automatically built so we know they aren't broken.
-  # But, `cargo test` sometimes ignores `[[bin]] test = false` directives,
-  #     https://github.com/rust-lang/cargo/issues/8338
-  # so doing this causes test failures in thise circumstances.
-  # As a substitute, I've included explicitly building the fuzz targets in the `xtask` build process.
-  # 
-  # "fuzz",
+  "problem",
 ]
 
 # Use feature resolver version 2 (latest). (This must be specified explicitly
@@ -44,10 +12,6 @@ resolver = "2"
 # as listed above, if applicable.
 edition = "2021"
 rust-version = "1.80"
-license = "MIT OR Apache-2.0"
-authors = ["Kevin Reid <kpreid@switchb.org>"]
-# TODO: add homepage = "..." when we have one
-repository = "https://github.com/kpreid/all-is-cubes"
 
 [workspace.dependencies]
 all-is-cubes-base = { path = "all-is-cubes-base", default-features = false }

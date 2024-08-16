@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "all-is-cubes-base"
+name = "problem"
 version = "0.0.0"
