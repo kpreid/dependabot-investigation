@@ -4,6 +4,8 @@
 name = "problem"
 
 [workspace.lints]
+rust.rust_2018_idioms = { level = "deny", priority = -1 }
 rust.unsafe_op_in_unsafe_fn = "deny"
-clippy.shadow_unrelated = "allow" # would use except for <https://github.com/rust-lang/rust-clippy/issues/10780>
+clippy.shadow_unrelated = "allow"
 clippy.should_panic_without_expect = "deny"
+clippy.pedantic = { level = "warn", priority = -1 }
