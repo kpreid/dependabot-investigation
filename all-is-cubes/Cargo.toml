@@ -114,6 +114,3 @@ pretty_assertions = { workspace = true }
 serde_json = { workspace = true }
 # Using tokio for async test-running.
 tokio = { workspace = true, features = ["macros", "rt", "sync"] }
-
-[lints]
-workspace = true

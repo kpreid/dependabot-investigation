@@ -54,6 +54,3 @@ indoc = { workspace = true }
 itertools = { workspace = true }
 pretty_assertions = { workspace = true }
 rand_xoshiro = { workspace = true }
-
-[lints]
-workspace = true
