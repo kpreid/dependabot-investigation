@@ -1,33 +1,13 @@
 [workspace]
-members = [
-  "problem",
-]
-
-# Use feature resolver version 2 (latest). (This must be specified explicitly
-# in a workspace, but would be implicit in a single package with edition="2021".)
-resolver = "2"
-
-[workspace.package]
-# When changing any of these values, be sure to also update the non-workspace packages
-# as listed above, if applicable.
-edition = "2021"
-rust-version = "1.80"
+members = ["problem"]
 
 [workspace.dependencies]
 all-is-cubes-base = { path = "all-is-cubes-base", default-features = false }
 itertools = { version = "0.12.0", default-features = false, features = ["use_alloc"] }
 
-# Note: Lints are also necessarily redefined in the workspaces other than this one.
 [workspace.lints]
-# rustc lints that are set to deny
 rust.rust_2018_idioms = { level = "deny", priority = -1 }
 rust.unsafe_op_in_unsafe_fn = "deny"
-
-# clippy::restriction lints that are set to allow (to note why we aren't using them)
 clippy.shadow_unrelated = "allow" # would use except for <https://github.com/rust-lang/rust-clippy/issues/10780>
-
-# clippy lints that are set to deny
 clippy.should_panic_without_expect = "deny"
-
-# clippy lints that are set to warn
 clippy.pedantic = { level = "warn", priority = -1 }
