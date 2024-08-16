@@ -1,9 +1,7 @@
-[workspace]
-
 [package]
 name = "problem"
 
-[workspace.lints]
+[lints]
 rust.rust_2018_idioms = { level = "deny", priority = -1 }
 clippy.should_panic_without_expect = "deny"
 clippy.pedantic = { level = "warn", priority = -1 }
