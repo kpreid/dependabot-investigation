@@ -1,6 +1,6 @@
 [workspace]
 members = [
-  "all-is-cubes",
+  "all-is-cubes-base",
   #"all-is-cubes-base",
   #"all-is-cubes-content",
   #"all-is-cubes-desktop",
@@ -50,7 +50,6 @@ authors = ["Kevin Reid <kpreid@switchb.org>"]
 repository = "https://github.com/kpreid/all-is-cubes"
 
 [workspace.dependencies]
-all-is-cubes = { path = "all-is-cubes", default-features = false }
 all-is-cubes-base = { path = "all-is-cubes-base", default-features = false }
 itertools = { version = "0.12.0", default-features = false, features = ["use_alloc"] }
 

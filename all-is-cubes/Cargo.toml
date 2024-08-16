@@ -1,6 +1,0 @@
-[package]
-name = "all-is-cubes"
-
-[dependencies]
-all-is-cubes-base = { workspace = true }
-itertools = { workspace = true }
