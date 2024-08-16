@@ -54,6 +54,6 @@ all-is-cubes = { path = "all-is-cubes", version = "0.8.0", default-features = fa
 all-is-cubes-base = { path = "all-is-cubes-base", version = "0.8.0", default-features = false }
 itertools = { version = "0.12.0", default-features = false, features = ["use_alloc"] }
 
-[workspace.lints.rust]
-rust_2018_idioms = { level = "deny", priority = -1 }
-unsafe_op_in_unsafe_fn = "deny"
+[workspace.lints]
+rust.rust_2018_idioms = { level = "deny", priority = -1 }
+rust.unsafe_op_in_unsafe_fn = "deny"
